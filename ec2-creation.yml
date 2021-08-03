@@ -22,11 +22,11 @@
       - name: Launch ec2 instances
         tags: create_ec2
         ec2:
-          region: us-east-1
-          key_name: SaravAK-PrivateKey 
-          group: app_sec_group
-          instance_type: t2.medium
-          image: ami-2051294a
+          region: us-east-2
+          key_name: BTBrad
+          group: launch-wizard-19
+          instance_type: t2.micro
+          image: ami-05220ffa0e7fce3d1
           wait: yes
           wait_timeout: 500
           count: 2
@@ -34,7 +34,7 @@
             name: appservers
             os: ubuntu
           monitoring: no
-          vpc_subnet_id: subnet-3d3ef270
+          vpc_subnet_id: subnet-72430108
           assign_public_ip: yes
         register: ec2
         delegate_to: localhost
