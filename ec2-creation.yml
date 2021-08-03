@@ -1,13 +1,17 @@
 ---
-- name: start an instance with a public IP address
-  community.aws.ec2_instance:
-    name: "ansible-test"
-    key_name: "BTBrad"
-    vpc_subnet_id: subnet-72430108
-    instance_type: t2.micro
-    security_group: default
-    network:
-      assign_public_ip: true
-    image_id: ami-05220ffa0e7fce3d1
-    tags:
-      Environment: Testing
+- name: EC2 Instance test
+  hosts: localhost
+  gather_facts: false
+  tasks:
+  - name: start an instance with a public IP address
+    community.aws.ec2_instance:
+      name: "ansible-test"
+      key_name: "BTBrad"
+      vpc_subnet_id: subnet-72430108
+      instance_type: t2.micro
+      security_group: default
+      network:
+        assign_public_ip: true
+      image_id: ami-05220ffa0e7fce3d1
+      tags:
+        Environment: Testing
