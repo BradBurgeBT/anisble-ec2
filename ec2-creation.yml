@@ -10,7 +10,7 @@
       image: ami-0dacb0c129b49f529
       region: us-east-2
       wait: yes
-      group: Ansible
+      group: launch-wizard-15
       count: 1
       vpc_subnet_id: subnet-72430108
       assign_public_ip: yes
