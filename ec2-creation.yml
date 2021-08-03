@@ -12,6 +12,7 @@
         register: ec2info 
       - name: Print info
         debug: var="ec2info.instances"
+        ec2_region: us-east-2
              
     # By specifying always on the tag, 
     # I let this block to run all the time by module_default
