@@ -22,7 +22,7 @@
       - name: Launch ec2 instances
         tags: create_ec2
         ec2:
-          ec2_region: us-east-2
+          region: us-east-2
           #ec2_url: https://ec2.eu-east-2.amazonaws.com
           key_name: BTBrad
           group: launch-wizard-19
