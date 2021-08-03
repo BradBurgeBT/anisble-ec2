@@ -18,7 +18,7 @@
     # this is for security to net create ec2 instances accidentally
  #   tags: ['always', 'getinfoonly']
   - name: Create EC2 Block
-    block: 
+    community.aws.ec2_instance: 
       - name: Launch ec2 instances
         tags: create_ec2
         ec2:
